@@ -6,7 +6,8 @@
 
 .opencps-theme.ux .opencps-toolbar button {
 	border-radius: 20px;
-	height: 41px;
+    height: 41px;
+    white-space: nowrap;
 }
 
 .opencps-theme.ux .opencps-toolbar input[type="text"] {
@@ -23,14 +24,8 @@
 }
 
 .opencps-theme.ux .opencps-toolbar div.search-input.input-keyword{
-	display: flex;
-}
-
-.opencps-theme.ux .opencps-toolbar .search-input.input-keyword input[type="text"]{
-	border-radius: 20px 0 0 20px;
-	padding-left: 25px;
-	float: left;
-	flex-grow: 1;
+	position: relative;
+    width: 100%;
 }
 
 .opencps-theme.ux .opencps-toolbar .search-input.input-keyword button{

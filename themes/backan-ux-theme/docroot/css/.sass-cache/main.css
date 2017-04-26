@@ -5636,6 +5636,10 @@ body:first-of-type .portlet-content:hover .lfr-icon-actions .taglib-text {
   color: #0690fb;
   margin-right: 5px; }
 
+.opencps-theme.ux #column-1.span3, .opencps-theme.ux #column-1.span4 {
+  width: 270px;
+  float: left; }
+
 .content .title_box {
   align-content: center;
   border-bottom: 1px solid #ccc;
@@ -5677,6 +5681,38 @@ body:first-of-type .portlet-content:hover .lfr-icon-actions .taglib-text {
 
 .title_box {
   margin-left: 15px; }
+
+.comboTreeWrapper .comboTreeInputWrapper input.opencps-combotree[readonly] {
+  border-radius: 25px;
+  padding-left: 25px;
+  background: white url("@base_url@/css/../images/custom/nav_toolbar/select_arrow_gray.png") no-repeat scroll right 12px center;
+  width: 100%;
+  cursor: pointer; }
+
+.opencps-theme.ux .opencps-toolbar .container > span:last-child .navbar-search {
+  width: 100%; }
+
+.opencps-theme.ux .opencps-toolbar select {
+  border-radius: 20px;
+  height: 41px;
+  padding: 0 20px;
+  width: 100%; }
+
+.opencps-theme.ux .opencps-toolbar .search-input.input-keyword input[type="text"] {
+  border-radius: 20px;
+  padding-left: 25px;
+  width: 100%;
+  max-width: none; }
+
+.opencps-theme.ux #column-2.span8, .opencps-theme.ux #column-2.span9 {
+  width: 870px;
+  margin-left: 30px;
+  float: left; }
+
+.opencps-theme.ux .search-input.input-keyword button {
+  position: absolute;
+  top: 0;
+  right: 0; }
 
 .opencps-theme.ux .ux-sign-in-wrapper {
   display: block;
@@ -6473,7 +6509,7 @@ table.payment tr td:nth-last-of-type(-n+2):after {
   border-radius: 8px;
   -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
-  width: 58%;
+  width: 49%;
   float: left;
   padding: 30px 25px; }
 
@@ -6525,7 +6561,7 @@ table.payment tr td:nth-last-of-type(-n+2):after {
   border-radius: 8px;
   -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
-  width: 370px;
+  width: 40%;
   float: right;
   padding: 30px 25px; }
 
@@ -6537,7 +6573,8 @@ table.payment tr td:nth-last-of-type(-n+2):after {
 
 .detail-right .info .date {
   margin-left: -130px;
-  position: absolute; }
+  width: 95px;
+  float: left; }
 
 .detail-right .info {
   float: right;
@@ -7010,6 +7047,38 @@ div.payment-ld:nth-child(2) {
 .title_box {
   margin-left: 15px; }
 
+.comboTreeWrapper .comboTreeInputWrapper input.opencps-combotree[readonly] {
+  border-radius: 25px;
+  padding-left: 25px;
+  background: white url("@base_url@/css/../images/custom/nav_toolbar/select_arrow_gray.png") no-repeat scroll right 12px center;
+  width: 100%;
+  cursor: pointer; }
+
+.opencps-theme.ux .opencps-toolbar .container > span:last-child .navbar-search {
+  width: 100%; }
+
+.opencps-theme.ux .opencps-toolbar select {
+  border-radius: 20px;
+  height: 41px;
+  padding: 0 20px;
+  width: 100%; }
+
+.opencps-theme.ux .opencps-toolbar .search-input.input-keyword input[type="text"] {
+  border-radius: 20px;
+  padding-left: 25px;
+  width: 100%;
+  max-width: none; }
+
+.opencps-theme.ux #column-2.span8, .opencps-theme.ux #column-2.span9 {
+  width: 870px;
+  margin-left: 30px;
+  float: left; }
+
+.opencps-theme.ux .search-input.input-keyword button {
+  position: absolute;
+  top: 0;
+  right: 0; }
+
 .opencps-theme.ux .opencps-form-navigator-container .taglib-form-navigator .tabbable-content .form-navigator.nav.nav-list > li.active > a > i.dossieroverview {
   background-image: url("@base_url@/css/../images/custom/icon_dossierpart_white.png");
   height: 16px;
@@ -7098,7 +7167,8 @@ div.payment-ld:nth-child(2) {
 
 .opencps-theme.ux .opencps-toolbar button {
   border-radius: 20px;
-  height: 41px; }
+  height: 41px;
+  white-space: nowrap; }
 
 .opencps-theme.ux .opencps-toolbar input[type="text"] {
   height: 41px; }
@@ -7112,13 +7182,8 @@ div.payment-ld:nth-child(2) {
   padding-right: 0; }
 
 .opencps-theme.ux .opencps-toolbar div.search-input.input-keyword {
-  display: flex; }
-
-.opencps-theme.ux .opencps-toolbar .search-input.input-keyword input[type="text"] {
-  border-radius: 20px 0 0 20px;
-  padding-left: 25px;
-  float: left;
-  flex-grow: 1; }
+  position: relative;
+  width: 100%; }
 
 .opencps-theme.ux .opencps-toolbar .search-input.input-keyword button {
   background: #0074cd none repeat scroll 0 0;

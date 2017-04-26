@@ -8,3 +8,7 @@
   color: #0690fb;
   margin-right: 5px; }
 
+.opencps-theme.ux #column-1.span3, .opencps-theme.ux #column-1.span4 {
+  width: 270px;
+  float: left; }
+
