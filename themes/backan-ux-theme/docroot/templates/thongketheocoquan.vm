@@ -1,0 +1,148 @@
+#set ($jsonArray = $jsonFactoryUtil.createJSONArray($jsonData))
+#set ($len = $jsonArray.length() - 1)
+<style>
+    .statistic-table td{
+        padding: 10px 5px;
+        background-color: #fff;
+    }
+    .header-cell{
+        background-color: #eee !important;
+        color: #555;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    
+    .tree-label.level1 {
+        padding-left: 25px;
+        position: relative;
+    }
+    
+    .tree-label.level2 {
+        padding-left: 50px;
+        position: relative;
+    }
+    
+    .tree-label.level3 {
+        padding-left: 75px;
+        position: relative;
+    }
+    
+    .tree-label {
+        display: block;
+        height: 41px;
+        line-height: 41px;
+        max-width: 300px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    
+    .branch1{
+        border-bottom: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+        height: 30px;
+        left: 1px;
+        position: absolute;
+        top: -10px;
+        width: 20px;
+    }
+    
+    .branch2 {
+        border-bottom: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+        height: 30px;
+        left: 26px;
+        position: absolute;
+        top: -10px;
+        width: 20px;
+    }
+    
+    .branch3 {
+        border-bottom: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+        height: 30px;
+        left: 51px;
+        position: absolute;
+        top: -10px;
+        width: 20px;
+    }
+    
+    .tree-cell {
+        padding: 0 5px !important;
+    }
+    th.table-header {
+        background-color: #3b806f;
+        color: white;
+        height: 35px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+</style>
+
+<table border="1" width="100%" borderColor="#aaa" class="statistic-table">
+
+<tr><th class="table-header" colspan="9">Thống kê hồ sơ theo cơ quan -  $jsonArray.getJSONObject(0).getString("name")</th></tr>
+
+<tr>
+    #set ($aggregatePeriod = $jsonArray.getJSONObject(0).getJSONObject("aggregate-period"))
+    
+    <td class="header-cell">Cơ quan</td>
+    <td class="header-cell">$aggregatePeriod.getString("k1_label")</td>
+    <td class="header-cell">$aggregatePeriod.getString("k2_label")</td>
+    <td class="header-cell">$aggregatePeriod.getString("k3_label")</td>
+    <td class="header-cell">$aggregatePeriod.getString("k4_label")</td>
+    <td class="header-cell">$aggregatePeriod.getString("k5_label")</td>
+    <td class="header-cell">$aggregatePeriod.getString("k6_label")</td>
+    <td class="header-cell">$aggregatePeriod.getString("k7_label")</td>
+    <td class="header-cell">$aggregatePeriod.getString("k8_label")</td>
+</tr>
+
+#foreach ($offset in [0..$len]) 
+    #set ($item = $jsonArray.getJSONObject($offset))
+    #set ($aggregatePeriod = $item.getJSONObject("aggregate-period"))
+        #if($offset == 0)
+            <tr>
+                <td class="tree-cell" rowspan="$jsonArray.length()">
+                    #foreach ($tempCount in [0..$len]) 
+                         #set ($temp = $jsonArray.getJSONObject($tempCount))
+                         #set ($level = $temp.getString("level"))
+                         
+                         <span class="tree-label level${level}">
+                            <span class="branch${level}"></span>
+                            $temp.getString("name")
+                         </span>
+                    #end
+               </td>
+                <td class="content-cell">$aggregatePeriod.getString("k1_value")</td>
+                <td class="content-cell">$aggregatePeriod.getString("k2_value")</td>
+                <td class="content-cell">$aggregatePeriod.getString("k3_value")</td>
+                <td class="content-cell">$aggregatePeriod.getString("k4_value")</td>
+                <td class="content-cell">$aggregatePeriod.getString("k5_value")</td>
+                <td class="content-cell">$aggregatePeriod.getString("k6_value")</td>
+                <td class="content-cell">$aggregatePeriod.getString("k7_value")</td>
+                <td class="content-cell">$aggregatePeriod.getString("k8_value")</td>
+            </tr>
+        
+        #else
+            <tr>
+
+                <td class="content-cell">$aggregatePeriod.getString("k1_value")</td>
+                <td class="content-cell">$aggregatePeriod.getString("k2_value")</td>
+                <td class="content-cell">$aggregatePeriod.getString("k3_value")</td>
+                <td class="content-cell">$aggregatePeriod.getString("k4_value")</td>
+                <td class="content-cell">$aggregatePeriod.getString("k5_value")</td>
+                <td class="content-cell">$aggregatePeriod.getString("k6_value")</td>
+                <td class="content-cell">$aggregatePeriod.getString("k7_value")</td>
+                <td class="content-cell">$aggregatePeriod.getString("k8_value")</td>
+            </tr>
+        #end
+   
+#end
+</table>
+<br>
+<script type="text/javascript">
+ 
+   var json = JSON.stringify(eval(${jsonData}));
+  
+</script>

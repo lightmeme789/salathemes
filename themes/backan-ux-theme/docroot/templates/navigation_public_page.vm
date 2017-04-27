@@ -1,0 +1,58 @@
+#set ($layoutService = $serviceLocator.findService('com.liferay.portal.service.LayoutLocalService'))
+#set ($publicLayoutPlid = $layoutService.getDefaultPlid($layout.getGroupId(), false)) ##true for private pages and false for public
+#set ($publicLayout = $layoutService.getLayout($publicLayoutPlid))
+#set ($publicLayouts = $layoutService.getLayouts($layout.getGroupId(), false, 0))
+	#if (!$is_signed_in)
+		<ul class="topnav" id="myTopnav">
+			#foreach ($nav_item in $publicLayouts)
+
+				#if (!$nav_item.isHidden())
+					#if ($nav_item.isSelected())
+		                <li class="active">
+		            #else
+		                <li>
+		            #end
+						<a aria-labelledby="layout_$nav_item.getLayoutId()" href="/web/guest$nav_item.getFriendlyURL()" $nav_item_attr_has_popup $nav_item.getTarget() role="menuitem"><span>$nav_item.getName()</span></a>
+		
+					</li>
+				#end
+			#end
+		</ul>
+        <ul class="navbar-right">
+            <li><a href="#" title=""><img alt=""></a></li>
+        </ul>
+	#else
+		#if($layout.isPublicLayout())
+			<ul class="topnav header-top navbar-right">
+				<li>
+					<a href="/group/guest">#language("back-to-backoffice")</a>
+				</li>
+			</ul>
+		#else
+			<ul aria-label="#language ("site-pages")" role="menubar" class="topnav header-top navbar-right" id="myTopnav">
+		      #foreach ($nav_item in $publicLayouts)
+
+				
+				#if (!$nav_item.isHidden())
+					 #if ($nav_item.isSelected())
+		                <li class="active">
+		            #else
+		                <li>
+		            #end
+						<a aria-labelledby="layout_$nav_item.getLayoutId()" href="/web/guest$nav_item.getFriendlyURL()" $nav_item_attr_has_popup $nav_item.getTarget() role="menuitem"><span>$nav_item.getName()</span></a>
+		
+					</li>
+				#end
+			   #end
+		     </ul>
+             <ul class="navbar-right after-login">
+                <li>
+                    <a href="#"><i class="fa fa-user" aria-hidden="true"></i><span>#language ("welcome-key")</span><span class="user-account"> $user_name</span></a>
+                </li>
+                <li>
+                    <a href="$sign_out_url" title="#language ("logout-key")"><i class="btn-login"></i>#language ("logout-key")</a>
+                </li>
+             </ul>
+		#end
+	#end
+<!-- End nav -->

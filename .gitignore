@@ -16,3 +16,4 @@ build.*.properties
 
 *.settings
 *.classpath
+*.sass-cache
