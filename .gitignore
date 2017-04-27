@@ -13,7 +13,7 @@ hs_err_pid*
 
 build.*.properties
 .project
-.settings
-.classpath
 
+*.settings
+*.classpath
 *.sass-cache
