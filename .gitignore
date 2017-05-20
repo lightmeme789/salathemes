@@ -18,3 +18,14 @@ build.*.properties
 *.classpath
 *.sass-cache
 .sass-cache
+themes/opencps-ux-theme/docroot/js/
+
+themes/opencps-ux-theme/docroot/templates/
+
+themes/opencps-ux-theme/docroot/images/
+
+themes/opencps-ux-theme/docroot/fonts/
+
+themes/opencps-ux-theme/docroot/css/
+
+themes/opencps-ux-theme/docroot/WEB-INF/classes/
