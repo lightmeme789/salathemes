@@ -40,13 +40,6 @@
 .title_box {
   margin-left: 15px; }
 
-.comboTreeWrapper .comboTreeInputWrapper input.opencps-combotree[readonly] {
-  border-radius: 25px;
-  padding-left: 25px;
-  background: white url("../images/custom/nav_toolbar/select_arrow_gray.png") no-repeat scroll right 12px center;
-  width: 100%;
-  cursor: pointer; }
-
 .opencps-theme.ux .opencps-toolbar .container > span:last-child .navbar-search {
   width: 100%; }
 

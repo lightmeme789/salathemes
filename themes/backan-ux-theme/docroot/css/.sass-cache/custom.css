@@ -3125,13 +3125,6 @@
 .title_box {
   margin-left: 15px; }
 
-.comboTreeWrapper .comboTreeInputWrapper input.opencps-combotree[readonly] {
-  border-radius: 25px;
-  padding-left: 25px;
-  background: white url("@base_url@/css/../images/custom/nav_toolbar/select_arrow_gray.png") no-repeat scroll right 12px center;
-  width: 100%;
-  cursor: pointer; }
-
 .opencps-theme.ux .opencps-toolbar .container > span:last-child .navbar-search {
   width: 100%; }
 
@@ -4490,13 +4483,6 @@ div.payment-ld:nth-child(2) {
 .title_box {
   margin-left: 15px; }
 
-.comboTreeWrapper .comboTreeInputWrapper input.opencps-combotree[readonly] {
-  border-radius: 25px;
-  padding-left: 25px;
-  background: white url("@base_url@/css/../images/custom/nav_toolbar/select_arrow_gray.png") no-repeat scroll right 12px center;
-  width: 100%;
-  cursor: pointer; }
-
 .opencps-theme.ux .opencps-toolbar .container > span:last-child .navbar-search {
   width: 100%; }
 
@@ -4563,6 +4549,41 @@ div.payment-ld:nth-child(2) {
   margin-bottom: 1px;
   vertical-align: middle;
   width: 19px; }
+
+.comboTreeWrapper .comboTreeInputWrapper input.opencps-combotree[readonly] {
+  border-radius: 25px;
+  padding-left: 25px;
+  background: white url("@base_url@/css/../images/custom/nav_toolbar/select_arrow_gray.png") no-repeat scroll right 12px center;
+  width: 89%;
+  cursor: pointer;
+  height: 30px !important; }
+
+.opencps-theme.ux .opencps-form-navigator-container .des-sub-button {
+  border-radius: 20px;
+  margin: 5px 0px;
+  padding: 5px 20px;
+  width: 227px;
+  height: 32px; }
+
+.opencps-theme.ux .fa.undo {
+  background-color: #0090ff; }
+
+.cssRequired:after {
+  content: "*";
+  color: red; }
+
+.opencps-theme .opencps-form-navigator-container .form-navigator-content .dossier-part-title-left, .opencps-theme .opencps-form-navigator-container .form-navigator-content .dossier-part-title-right {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  line-height: normal;
+  overflow: hidden; }
+
+.opencps-theme .opencps-form-navigator-container .form-navigator-content .bold-label {
+  width: 120px; }
+
+.opencps-theme .opencps-form-navigator-container .form-navigator-content .dossier-part-title-right [class*="span"] {
+  min-height: 25px; }
 
 /* Components  */
 .opencps-theme.ux .btn {

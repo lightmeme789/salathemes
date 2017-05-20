@@ -20,6 +20,7 @@
 @import url(button.css);
 @import url(portlets/portlet_10.css);
 @import url(portlets/portlet_18.css);
+@import url(portlets/saila-extra.css);
 
 /* Components  */
 @import url(button.css);
@@ -235,4 +236,3 @@ body{
 .opencps-theme.ux .home_bg #column-1 .portlet-borderless-container{
   background: transparent !important;
 }
-
