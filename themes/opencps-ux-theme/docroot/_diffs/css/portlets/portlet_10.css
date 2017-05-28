@@ -58,7 +58,7 @@
 
 .opencps-theme.ux .opencps-toolbar .search-input.input-keyword input[type="text"] {
     border-radius: 20px;
-    padding-left: 25px;
+/*     padding-left: 25px; */
     width: 100%;
     max-width: none;
 }

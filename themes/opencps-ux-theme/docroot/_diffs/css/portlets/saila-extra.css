@@ -36,3 +36,12 @@
 .opencps-theme .opencps-form-navigator-container .form-navigator-content .dossier-part-title-right [class*="span"] {
     min-height: 25px;
 }
+.bold, .bold-label {
+    font-family: 'Roboto-Bold';
+}
+.opencps-theme.ux .lfr-input-date .control-group {
+    position: relative;
+}
+.opencps-theme.ux .control-group .field {
+	height:32px;
+}
